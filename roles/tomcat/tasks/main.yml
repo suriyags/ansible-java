@@ -41,7 +41,8 @@
   copy: src=tomcat-initscript.sh dest=/etc/init.d/tomcat mode=0755
 
 - name: Start Tomcat
-  systemctl: name=tomcat state=started enabled=yes
+    command: /home/tomcat/apache-tomcat-7.0.42/bin/startup.sh
+    sudo: true
 
 - name: wait for tomcat to start
   wait_for: port={{http_port}}
