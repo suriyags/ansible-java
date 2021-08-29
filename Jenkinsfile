@@ -7,13 +7,7 @@ pipeline {
     }
      
     stages {
-      stage('checkout') {
-           steps {
-             
-                git branch: 'master', url: 'https://github.com/suriyags/ansible-java.git'
-             
-          }
-        }
+
          stage('Tools Init') {
             steps {
                 script {
