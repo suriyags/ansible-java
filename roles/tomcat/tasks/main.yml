@@ -39,7 +39,9 @@
 
 - name: Install Tomcat init script
   copy: src=tomcat-initscript.sh dest=/etc/init.d/tomcat mode=0755
-  command: /home/tomcat/apache-tomcat-7.0.61/bin/startup.sh
+
+- name: Start Tomcat
+  service: name=tomcat state=started enabled=yes
 
 
 - name: wait for tomcat to start
