@@ -40,7 +40,7 @@ pipeline {
                  
              
                
-               sh "ansible-playbook main.yml -i inventories/dev/hosts --user jenkins --key-file ~/.ssh/id_rsa"
+               sh "ansible-playbook main.yml --user jenkins --key-file ~/.ssh/id_rsa"
 
                
             
